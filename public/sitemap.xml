@@ -20,6 +20,10 @@
     <loc>http://localhost:1313/langchain_project_book/preface/index.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/langchain_project_book/talk_to_graph_db/arch/index.html</loc>
+    <lastmod>2025-01-03T22:04:12-05:00</lastmod>
+  </url>
+  <url>
     <loc>http://localhost:1313/langchain_project_book/knowledgebase_semantic_analysis/preparing_data/index.html</loc>
     <lastmod>2024-10-28T22:21:47+08:00</lastmod>
   </url>
@@ -128,6 +132,10 @@
     <lastmod>2024-10-28T18:49:37+08:00</lastmod>
   </url>
   <url>
+    <loc>http://localhost:1313/langchain_project_book/talk_to_graph_db/index.html</loc>
+    <lastmod>2024-12-27T06:48:46-05:00</lastmod>
+  </url>
+  <url>
     <loc>http://localhost:1313/langchain_project_book/knowledgebase_semantic_analysis/enable_multiconv_with_history/index.html</loc>
     <lastmod>2024-10-28T22:33:54+08:00</lastmod>
   </url>
@@ -138,6 +146,10 @@
   <url>
     <loc>http://localhost:1313/langchain_project_book/fundamentals/document_n_debugging/index.html</loc>
     <lastmod>2024-10-28T18:54:03+08:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/langchain_project_book/future/index.html</loc>
+    <lastmod>2025-01-03T21:21:32-05:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/langchain_project_book/knowledgebase_semantic_analysis/complete_code/index.html</loc>
@@ -157,7 +169,7 @@
   </url>
   <url>
     <loc>http://localhost:1313/langchain_project_book/index.html</loc>
-    <lastmod>2024-10-28T22:39:33+08:00</lastmod>
+    <lastmod>2025-01-03T22:04:12-05:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/langchain_project_book/categories/index.html</loc>

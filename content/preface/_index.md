@@ -18,8 +18,8 @@ Thank you for embarking on this adventure, and may your exploration of LangChain
 
 <div style="page-break-after: always;"></div>
 
-**<center>"If I have seen further, it is by standing upon the shoulders of giants."</center>**
-<center>Sir Isaac Newton (1643 - 1727)</center>
+**"If I have seen further, it is by standing upon the shoulders of giants."**
+\- **Sir Isaac Newton (1643 - 1727)**
 
 <div style="page-break-after: always;"></div>
 
@@ -34,7 +34,13 @@ Discover LangChain's functions, design insights, and real-world applications lik
 
 ### Long Description
 In the rapidly evolving world of technology, LangChain emerges as a game-changer. In this book, you will discover LangChain's importance in the tech world and delve into its functions for creating advanced language model applications.
-This book equips you with the knowledge to construct context-aware applications that enable language models to interact with their environment and other data sources. The book gives you a hands-on practice to build four applications using LangChain. Throughout the book, you will learn to enhance data processing in four project. In "Book Summarization and Q&A - Project One," LangChain facilitates the management of private data, while "Ticketing System - Project Two" streamlines customer support ticket handling through semantic analysis. "Knowledge Base Semantic Analysis - Project Three" employs LangChain for efficient similarity search and semantic analysis in a knowledge base. Lastly, "Intelligent Programming Assistant - Project Four" harnesses the power of LangChain to generate code and natural language from code and text prompts, offering support for multiple programming languages.
+
+This book equips you with the knowledge to construct context-aware applications that enable language models to interact with their environment and other data sources. The book gives you a hands-on practice to build four applications using LangChain. Throughout the book, you will learn to enhance data processing in four projects. 
+
+In "Book Summarization and Q&A - Project One," LangChain facilitates the management of private data, while "Ticketing System - Project Two" streamlines customer support ticket handling through semantic analysis. "Knowledge Base Semantic Analysis - Project Three" employs LangChain for efficient similarity search and semantic analysis in a knowledge base. 
+
+Lastly, "Talk to Your Graph Database - Project Four" facilitates the integration of graph databases with large language models, allowing for a straightforward visualization of their relationships.
+
 By the end of this book, you'll acquire the expertise to create LLM apps with LangChain, from Python setup to model integration, and become proficient in creating custom language model applications for various domains.
 
 In the rapidly evolving world of technology, LangChain emerges as a game-changer. In this book, you will discover LangChain's importance in the tech world and delve into its functions for creating advanced language model applications.
@@ -45,7 +51,9 @@ In "Ticketing System - Project Two," LangChain orchestrates the processing of cu
 
 In “Knowledge Base Semantic Analysis - Project Three,” - a knowledge base is loaded into a vector database. LangChain provides task scheduling, data management, and fault tolerance features to orchestrate the process of similarity search. The LLM then performs semantic analysis on queries, identifying the most relevant information in the knowledge base. 
 
-In “Intelligent Programming Assistant - Project Four” - this LLM generates code and natural language about code, from both code and natural language prompts. It can also be used for code completion and debugging. It supports many popular programming languages including Python
+<!-- In “Talk to Your Graph Database - Project Four” - this LLM generates code and natural language about code, from both code and natural language prompts. It can also be used for code completion and debugging. It supports many popular programming languages including Python -->
+
+In "Talk to Your Graph Database - Project Four," a dataset is generated in CSV format and inserted into a graph database that integrates with a large language model plugin. This setup enables users to interact with the graph database using natural language.
 
 By the end of this book, you'll acquire the expertise to create LLM apps with LangChain, from Python setup to model integration, and become proficient in creating custom language model applications for various domains.
 

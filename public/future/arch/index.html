@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
+  <head><script src="/langchain_project_book/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=langchain_project_book/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.139.3">
+    <meta name="generator" content="Relearn 7.0.1+72a875f1db967152c77914cff4d53f8fcee0e619">
+    <meta name="description" content="LangChain and LLM are not Silver Bullet. They are not perfect and there are some areas that can be improved.
+The community of AI, or Generative AI, are growing fast and the technology is evolving rapidly. The growth of the community is unstoppable.
+They’re still experimenting and exploring the potential of AI. Some of the APIs are changing too frequently. That indicates the technology is evolving rapidly and the designer might not have a clear ideas from the beginning, reasonably.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Future of LangChain and AI :: LangChain AI">
+    <meta name="twitter:description" content="LangChain and LLM are not Silver Bullet. They are not perfect and there are some areas that can be improved.
+The community of AI, or Generative AI, are growing fast and the technology is evolving rapidly. The growth of the community is unstoppable.
+They’re still experimenting and exploring the potential of AI. Some of the APIs are changing too frequently. That indicates the technology is evolving rapidly and the designer might not have a clear ideas from the beginning, reasonably.">
+    <meta property="og:url" content="http://localhost:1313/langchain_project_book/future/arch/index.html">
+    <meta property="og:site_name" content="LangChain AI">
+    <meta property="og:title" content="Future of LangChain and AI :: LangChain AI">
+    <meta property="og:description" content="LangChain and LLM are not Silver Bullet. They are not perfect and there are some areas that can be improved.
+The community of AI, or Generative AI, are growing fast and the technology is evolving rapidly. The growth of the community is unstoppable.
+They’re still experimenting and exploring the potential of AI. Some of the APIs are changing too frequently. That indicates the technology is evolving rapidly and the designer might not have a clear ideas from the beginning, reasonably.">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Future of LangChain and AI">
+    <meta property="article:published_time" content="2025-01-03T21:21:32-05:00">
+    <meta property="article:modified_time" content="2025-01-03T21:21:32-05:00">
+    <meta itemprop="name" content="Future of LangChain and AI :: LangChain AI">
+    <meta itemprop="description" content="LangChain and LLM are not Silver Bullet. They are not perfect and there are some areas that can be improved.
+The community of AI, or Generative AI, are growing fast and the technology is evolving rapidly. The growth of the community is unstoppable.
+They’re still experimenting and exploring the potential of AI. Some of the APIs are changing too frequently. That indicates the technology is evolving rapidly and the designer might not have a clear ideas from the beginning, reasonably.">
+    <meta itemprop="datePublished" content="2025-01-03T21:21:32-05:00">
+    <meta itemprop="dateModified" content="2025-01-03T21:21:32-05:00">
+    <meta itemprop="wordCount" content="400">
+    <title>Future of LangChain and AI :: LangChain AI</title>
+    <link href="/langchain_project_book/css/fontawesome-all.min.css?1735959296" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/fontawesome-all.min.css?1735959296" rel="stylesheet"></noscript>
+    <link href="/langchain_project_book/css/nucleus.css?1735959296" rel="stylesheet">
+    <link href="/langchain_project_book/css/auto-complete.css?1735959296" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/auto-complete.css?1735959296" rel="stylesheet"></noscript>
+    <link href="/langchain_project_book/css/perfect-scrollbar.min.css?1735959296" rel="stylesheet">
+    <link href="/langchain_project_book/css/fonts.css?1735959296" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/fonts.css?1735959296" rel="stylesheet"></noscript>
+    <link href="/langchain_project_book/css/theme.css?1735959296" rel="stylesheet">
+    <link href="/langchain_project_book/css/theme-auto.css?1735959296" rel="stylesheet" id="R-variant-style">
+    <link href="/langchain_project_book/css/chroma-auto.css?1735959296" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/langchain_project_book/css/print.css?1735959296" rel="stylesheet" media="print">
+    <script src="/langchain_project_book/js/variant.js?1735959296"></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/langchain_project_book';
+      window.relearn.disableAnchorCopy=false;
+      window.relearn.disableAnchorScrolling=false;
+      // variant stuff
+      window.variants && variants.init( [ 'auto' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/langchain_project_book/future/arch/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#langchain-and-llm-are-not-silver-bullet">LangChain and LLM are not Silver Bullet.</a></li>
+        <li><a href="#hallucination">Hallucination</a></li>
+        <li><a href="#agentic-ai">Agentic AI</a></li>
+        <li><a href="#get-involved-in-open-source-community">Get Involved in Open Source Community</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/langchain_project_book/index.html"><span itemprop="name">LangChain Project Handbook</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/langchain_project_book/future/index.html"><span itemprop="name">Future of LangChain and AI</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Future of LangChain and AI</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/langchain_project_book/future/index.html" title="Future of LangChain and AI (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><span class="topbar-control"><i class="fa-fw fas fa-chevron-right"></i></span>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable chapter" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="chapter narrow">
+  <header class="headline">
+  </header>
+<div class="article-subheading">Chapter 8</div>
+
+<h1 id="future-of-langchain-and-ai">Future of LangChain and AI</h1>
+
+<h3 id="langchain-and-llm-are-not-silver-bullet">LangChain and LLM are not Silver Bullet.</h3>
+<p>They are not perfect and there are some areas that can be improved.</p>
+<p>The community of AI, or Generative AI, are growing fast and the technology is evolving rapidly. The growth of the community is unstoppable.</p>
+<p>They&rsquo;re still experimenting and exploring the potential of AI. Some of the APIs are changing too frequently. That indicates the technology is evolving rapidly and the designer might not have a clear ideas from the beginning, reasonably.</p>
+<p>LangChain has a lot of works to do including debug, documentation and maintain the community.</p>
+<h3 id="hallucination">Hallucination</h3>
+<p>The hallucination is a common problem in LLM. It may direct the user to the controversal direction. Specifically when an LLM is being trained on a large amount of data, it may generate some content that is not accurate and reliable.</p>
+<p>Currently LLMs are being trained on a large amount of data, which is not always accurate and reliable. And the content and inference algorithm are not transparent.</p>
+<p>Honestly I don&rsquo;t trust some of the LLM from beginning as I&rsquo;m sure the data fed into the LLM during training is particularly biased, in terms of politics, culture, and etc, which are based on the data selector&rsquo;s perspective and value proposition.</p>
+<h3 id="agentic-ai">Agentic AI</h3>
+<p>The current LangChain is a great framework for building LLM applications. However, it is not perfect and there are some areas that can be improved.</p>
+<p>It would turn to manage and orchestrate agents, tools, and models.</p>
+<p>It would emulate the human&rsquo;s thinking process and decision-making process.</p>
+<p>It would be able to handle more complex tasks and scenarios.</p>
+<p>I believe the future of AI is agentic AI, which is able to understand the user&rsquo;s intent and execute the task accordingly. And it would intentionally replace human&rsquo;s work in the future. I used to talk to my company&rsquo;s CEO about this and made a joke that all the administrators, who handle and process PowerPoint and Excel files, sitting at the entire floor 5 in the company would be replaced by AI.</p>
+<h3 id="get-involved-in-open-source-community">Get Involved in Open Source Community</h3>
+<p>My recommendation is to</p>
+<ul>
+<li>Keep watching the LangChain&rsquo;s development and updates</li>
+<li>Get hands-on experience with LangChain</li>
+<li>Get support from the community, such as StackOverflow, Reddit, LangChain&rsquo;s Discord, and LangChain&rsquo;s GitHub repository</li>
+</ul>
+<p>What I&rsquo;m doing is to</p>
+<ul>
+<li>Make everything open source</li>
+<li>Explore the potential of AI with my high curiosity</li>
+<li>Share my experience and insights with the community</li>
+</ul>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+          <a id="R-logo" class="R-default" href="/langchain_project_book/index.html">
+LangChain AI
+          </a>
+        </div>
+        <script>
+          window.index_js_url="/langchain_project_book/searchindex.js?1735959296";
+        </script>
+        <search><form action="/langchain_project_book/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/langchain_project_book/js/auto-complete.js?1735959296" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.min.js?1735959296" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.stemmer.support.min.js?1735959296" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.multi.min.js?1735959296" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.en.min.js?1735959296" defer></script>
+        <script src="/langchain_project_book/js/search.js?1735959296" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/langchain_project_book/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/langchain_project_book/preface/index.html"><a class="padding" href="/langchain_project_book/preface/index.html">Preface</a></li>
+            <li class="" data-nav-id="/langchain_project_book/fundamentals/index.html"><a class="padding" href="/langchain_project_book/fundamentals/index.html">LangChain Fundamentals</a><ul id="R-subsections-051b8c5fd8f766470e956ead18ce1cb3" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/langchain_project_book/tools_n_lib/index.html"><a class="padding" href="/langchain_project_book/tools_n_lib/index.html">Tools and Libraries</a><ul id="R-subsections-3c5dcf5d1bf9a4257e3c43211b71abb9" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/langchain_project_book/doc_sum/index.html"><a class="padding" href="/langchain_project_book/doc_sum/index.html">Document Summarization</a><ul id="R-subsections-892cbbe9783455ee4b89b1c5a36b4df3" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/langchain_project_book/ticketing_sys/index.html"><a class="padding" href="/langchain_project_book/ticketing_sys/index.html">Ticketing System</a><ul id="R-subsections-df001df1c52b5b7606441a0df81b00cd" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/langchain_project_book/knowledgebase_semantic_analysis/index.html"><a class="padding" href="/langchain_project_book/knowledgebase_semantic_analysis/index.html">KnowledgeBase Semantic Analysis</a><ul id="R-subsections-c052591330c8f18d93a5e1634f9733d5" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/langchain_project_book/talk_to_graph_db/index.html"><a class="padding" href="/langchain_project_book/talk_to_graph_db/index.html">Talk to Your GraphDB</a></li>
+            <li class="parent " data-nav-id="/langchain_project_book/future/index.html"><a class="padding" href="/langchain_project_book/future/index.html">Future of LangChain and AI</a><ul id="R-subsections-1983b51dee04e83ba2c287ba24e4e185" class="collapsible-menu">
+            <li class="active " data-nav-id="/langchain_project_book/future/arch/index.html"><a class="padding" href="/langchain_project_book/future/arch/index.html">Future of LangChain and AI</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/langchain_project_book/future/arch/index.html" lang="en-us" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-select-variant-auto" value="auto" selected>Auto</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+        <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/langchain_project_book/js/clipboard.min.js?1735959296" defer></script>
+    <script src="/langchain_project_book/js/perfect-scrollbar.min.js?1735959296" defer></script>
+    <script src="/langchain_project_book/js/theme.js?1735959296" defer></script>
+  </body>
+</html>

@@ -1,0 +1,258 @@
++++
+title = 'Talk to Your GraphDB'
+type = "chapter"
+weight = 7
+date = 2024-12-27T06:48:46-05:00
+draft = false
++++
+
+In summer of 2024, I received a request from our Sales, who manages the engagement with public service. The customer has multiple diementions of dataset and what they want is like
+
+1. Link the different diementaional dataset together
+2. Gives them a better graphical visualization of data relationships
+3. As they don't have much technical skills, they can't handle SQL script and wish to "talk" to the database in their native language. Then the application responds the printable data-sheet
+
+What I can think is to enable three things and combine them together
+
+1. Use `neo4j` as graph database, in docker for easier operation management
+2. Enable `cypher` script, which can be treated as a plugin of Large Language Model (LLM) with `neo4j`
+3. Use `ollama` to orchestrate LLM model
+
+### Business Scenario
+
+I'm going to simulate and simplify the business scenario. For example, the customer has a dataset of `fushun` city, which contains multiple dimensions of data, such as `population`, `economy`, `education`, `transportation`, etc. I just simulate to use 2 kinds of data, `population` and `education`, in which `population` is a table of `name`, `age`, `gender`, `income`, etc. and `education` is a table of `name`, `school`, `major`, `degree`, etc.
+
+
+### Architecture
+
+```plantuml
+{{< plantuml >}}
+
+actor User
+node LLM
+database Neo4j
+
+User -> LLM: Ask a question
+LLM -> Neo4j: Query the graph database
+Neo4j -> LLM: Return the result
+LLM -> User: Answer the question
+
+{{< /plantuml >}}
+```
+
+Figure 7.1: The architecture of the application
+
+
+### Preparing DataSet
+
+Ref > https://gitlab.com/digiits/larklex/-/blob/main/docs/240815_fushun.md
+
+I'm using Perplexity.ai to generate the data set, with the following `prompt`
+
+```
+Generate a dataset of 20 rows, with the following columns: Name, Age, Gender, Income. The data should be realistic and diverse, and the income should be between 50000 and 120000.
+```
+
+```csv
+Name,Age,Gender,Income
+Alice Johnson,28,Female,55000
+Bob Smith,34,Male,72000
+Catherine Lee,22,Female,48000
+David Brown,45,Male,95000
+Eva Green,31,Female,60000
+Frank White,29,Male,52000
+Grace Chen,38,Female,78000
+Henry Adams,50,Male,120000
+Ivy Patel,27,Female,49000
+James Wilson,40,Male,85000
+Katherine Davis,33,Female,67000
+Liam Thompson,25,Male,53000
+Mia Garcia,30,Female,62000
+Nathan Martinez,36,Male,74000
+Olivia Taylor,24,Female,50000
+Paul Robinson,47,Male,110000
+Quinn Harris,29,Female,58000
+Ryan Clark,39,Male,90000
+Sophia Lewis,26,Female,51000
+Thomas Walker,42,Male,99000
+```
+
+Then I use the following prompt to generate the education dataset
+
+```
+Generate a dataset of 20 rows, with the following columns: Name, School, Major, Degree. The data should be realistic and diverse, and the degree should be between Bachelor's, Master's, and Doctor's.
+```
+
+```csv
+Name,School,Major,Degree
+Alice Johnson,Havard University,Psychology,Bachelor's
+Bob Smith,Yale University,Business Administration,Bachelor's
+Catherine Lee,UCLA,Biology,Bachelor's
+David Brown,Cambridge University,Literature Master's 
+Eva Green,Northeastern University,Chemistry,Bachelor's 
+Frank White,Penn State University,Civil Engineering,Bachelor's 
+Grace Chen,UChicago,Economics,Bachelor's 
+Henry Adams,MIT Computer Science,Bachelor's 
+Ivy Patel,Duke University,Nursing,Bachelor's 
+James Wilson,Cornell University,Agriculture,Bachelor's 
+Katherine Davis,UCBerkeley,Sociology,Bachelor's 
+Liam Thompson,Rice University,Aerospace Engineering,Bachelor's 
+Mia Garcia,Texas A&M University,Psychology,Bachelor's 
+Nathan Martinez,UCLA,Cultural Studies,Bachelor's 
+Olivia Taylor,Wisconsin-Madison University,Linguistics,Bachelor's 
+Paul Robinson,UVA,Higher Education Master's 
+Quinn Harris,NW University,Psychiatry Master's 
+Ryan Clark,UConn,Chemistry Bachelor's 
+Sophia Lewis,Nebraska University,Chemistry Bachelor's 
+Thomas Walker,Wisconsin-Madison University,Law Bachelor's 
+```
+
+
+### Using `neo4j` as Graph Database
+
+#### Installing `neo4j` with Docker
+
+We would need to install `neo4j` with docker and persist the data to the local disk.
+
+```sh
+docker run --restart always --name=neo4j \
+    --publish=7474:7474 --publish=7687:7687 \
+    --env NEO4J_AUTH=neo4j/neo4j_password \
+    --volume /home/USER/neo4j_storage/data:/data \
+    --volume /home/USER/neo4j_storage/logs:/logs \
+    --volume /home/USER/neo4j_storage/import:/import \
+    neo4j:latest
+```
+
+> Note: we're going to import the dataset into the database from CSV files, which would be stored in the `/home/USER/neo4j_storage/import` directory. Therefore, we need to create this directory before running the container. And copy the CSV files into this directory.
+
+After the container is running, we can access the `neo4j` dashboard at `http://IP_ADDRESS:7474`.
+
+> Security Note: The `neo4j` dashboard is not secure, so we should not use it in production environment. Even in the local environment, we should change the default password.
+
+You would see the following screen after logging in with the default credentials (username: `neo4j`, password: `neo4j_password`). 
+
+![](images/2024-12-31-18-14-52.png)
+
+All the data would be stored in the `/home/USER/neo4j_storage/data` directory permanently. In order to make this document simple, I'm going to use the default database.
+
+#### Importing Data
+
+There are multiple ways to import data into the database. We can use the `neo4j` dashboard to import the data, or use the `cypher` script to import the data. I list the simple steps to import the data into the database from dashboard.
+
+Make sure you have copied the CSV files into the `/home/USER/neo4j_storage/import` directory.
+
+From the dashboard, perform the following steps:
+
+1. Import Income Data:
+```sh
+LOAD CSV WITH HEADERS FROM 'file:///income.csv' AS row
+CREATE (:Person {name: row.Name, age: toInteger(row.Age), gender: row.Gender, income: toInteger(row.Income)});
+```
+
+2. Import Education Data:
+```sh
+LOAD CSV WITH HEADERS FROM 'file:///education.csv' AS row
+CREATE (:Education {name: row.Name, school: row.School, major: row.Major, degree: row.Degree});
+```
+
+3. Create Relationships:
+```sh
+MATCH (p:Person), (e:Education)
+WHERE p.name = e.name
+CREATE (p)-[:EDUCATED_AT]->(e);
+```
+
+### Configuring LLM
+
+I recommend to either use `ollama` or directly connect to HuggingFace's LLM model.
+
+#### Using `ollama`
+
+Please refer to Chapter 4 - Document Summarization - Software Environment for more details.
+
+#### Using HuggingFace's LLM model
+
+Before using HuggingFace's LLM model, you need to get the API token from HuggingFace.
+
+```python
+import os
+HUGGINGFACEHUB_API_TOKEN = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+
+from langchain_huggingface import HuggingFaceEndpoint
+repo_id = "mistralai/Mistral-7B-Instruct-v0.2"
+llm = HuggingFaceEndpoint(
+    repo_id = repo_id,
+    temperature = 0.5,
+    huggingfacehub_api_token=HUGGINGFACEHUB_API_TOKEN,
+    max_new_tokens = 250,
+)
+```
+
+### Configuring `neo4j` with `langchain`
+
+To communicate with a Neo4j graph database through a Large Language Model (LLM), you can leverage integration frameworks such as LangChain. Here’s how you can set up this interaction:
+
+#### Integrate Neo4j with LangChain
+
+LangChain provides a robust framework for integrating LLMs with various data sources, including Neo4j. You can install the necessary packages using pip:
+
+```bash
+pip install langchain langchain-community langchain-neo4j neo
+```
+
+This installation will allow you to utilize Langchain's capabilities to interact with your Neo4j database.
+
+#### Set Up Connection to Neo4j
+
+You need to establish a connection between your application and the Neo4j database. This typically involves specifying the database URI and authentication credentials.
+
+```python
+from langchain_neo4j import Neo4jGraph
+
+# Example connection string
+neo4j_graph = Neo4jGraph(
+    uri="bolt://localhost:7687",
+    user="neo4j",
+    password="your_password"
+)
+```
+
+#### Use Cypher Queries
+Once connected, you can use Cypher queries to perform operations on your graph database. You can formulate queries based on user input or predefined templates.
+
+```python
+query = "MATCH (p:Person) RETURN p.name, p.income"
+results = neo4j_graph.run(query)
+```
+
+#### Incorporate LLM for Natural Language Processing
+You can utilize an LLM (like OpenAI's models) to process natural language queries from users and convert them into Cypher queries that can be executed against the Neo4j database.
+
+```python
+from langchain.llms import OpenAI
+
+llm = OpenAI(api_key="your_openai_api_key")
+
+# Example user question
+user_question = "What is the income of Alice Johnson?"
+cypher_query = llm.generate_cypher(user_question)
+
+# Execute the generated query
+results = neo4j_graph.run(cypher_query)
+```
+
+#### Implement Retrieval-Augmented Generation (RAG)
+You can enhance the interaction by implementing Retrieval-Augmented Generation (RAG), which allows the LLM to ground its responses in the factual data stored in the graph. This helps reduce misinformation or "hallucinations" by ensuring that the model's outputs are based on verified data.
+
+- Use vector search capabilities of Neo4j to find relevant nodes based on user queries.
+- Combine results with LLM-generated content for comprehensive answers.
+
+#### Explore Graph Data
+You can also visualize and explore the graph data using tools like Neo4j Bloom or integrate it into your application for dynamic interactions.
+
+### Summary
+
+- Every component is 100% open source
+- `ollama` and `neo4j` are running in docker, which is easy to deploy and manage
+- Everything is running in local, which is easy to debug and test and secured

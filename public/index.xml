@@ -6,7 +6,7 @@
     <description>My Journey with LangChain In late 2022, I embarked on an exciting journey with LangChain while leading a development team. This coincided with OpenAI’s significant boost in popularity, marking a pivotal moment in AI technology.&#xA;Discovery and Adoption After several months of exploration, our team identified LangChain as the ideal API standard and base platform for our projects. What drew us to LangChain was its comprehensive suite of features:&#xA;Configuring vector databases Orchestrating multiple popular embeddings and large language models from open source community Facilitating complex workflows with agents These capabilities made LangChain an indispensable tool for our development needs.</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Oct 2024 22:39:33 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jan 2025 21:21:32 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/langchain_project_book/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Preface</title>
@@ -49,6 +49,20 @@
       <pubDate>Mon, 28 Oct 2024 22:39:33 +0800</pubDate>
       <guid>http://localhost:1313/langchain_project_book/knowledgebase_semantic_analysis/index.html</guid>
       <description>A knowledge base acts as a centralized hub for all essential information, streamlining the organization and standardization of knowledge within a company. This not only enhances internal efficiency by providing employees with quick access to necessary details but also projects the company as modern, professional, and up-to-date. Moreover, it facilitates direct engagement with stakeholders, fostering a feedback loop that can significantly improve relationships and customer loyalty. By adopting a knowledge base, enterprises can significantly enhance their operational efficiency, reduce customer support costs through self-service solutions, and ultimately boost their overall business performance.</description>
+    </item>
+    <item>
+      <title>Talk to Your GraphDB</title>
+      <link>http://localhost:1313/langchain_project_book/talk_to_graph_db/index.html</link>
+      <pubDate>Fri, 27 Dec 2024 06:48:46 -0500</pubDate>
+      <guid>http://localhost:1313/langchain_project_book/talk_to_graph_db/index.html</guid>
+      <description>In summer of 2024, I received a request from our Sales, who manages the engagement with public service. The customer has multiple diementions of dataset and what they want is like&#xA;Link the different diementaional dataset together Gives them a better graphical visualization of data relationships As they don’t have much technical skills, they can’t handle SQL script and wish to “talk” to the database in their native language. Then the application responds the printable data-sheet What I can think is to enable three things and combine them together</description>
+    </item>
+    <item>
+      <title>Future of LangChain and AI</title>
+      <link>http://localhost:1313/langchain_project_book/future/index.html</link>
+      <pubDate>Fri, 03 Jan 2025 21:21:32 -0500</pubDate>
+      <guid>http://localhost:1313/langchain_project_book/future/index.html</guid>
+      <description>LangChain and LLM are not Silver Bullet. They are not perfect and there are some areas that can be improved.&#xA;The community of AI, or Generative AI, are growing fast and the technology is evolving rapidly. The growth of the community is unstoppable.&#xA;They’re still experimenting and exploring the potential of AI. Some of the APIs are changing too frequently. That indicates the technology is evolving rapidly and the designer might not have a clear ideas from the beginning, reasonably.</description>
     </item>
   </channel>
 </rss>

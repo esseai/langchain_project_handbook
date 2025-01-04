@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Future of LangChain and AI :: LangChain AI</title>
+    <link>http://localhost:1313/langchain_project_book/future/index.html</link>
+    <description>LangChain and LLM are not Silver Bullet. They are not perfect and there are some areas that can be improved.&#xA;The community of AI, or Generative AI, are growing fast and the technology is evolving rapidly. The growth of the community is unstoppable.&#xA;They’re still experimenting and exploring the potential of AI. Some of the APIs are changing too frequently. That indicates the technology is evolving rapidly and the designer might not have a clear ideas from the beginning, reasonably.</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/langchain_project_book/future/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
