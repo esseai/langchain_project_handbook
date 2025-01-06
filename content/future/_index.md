@@ -18,7 +18,7 @@ LangChain has a lot of works to do including debug, documentation and maintain t
 
 ### Hallucination
 
-The hallucination is a common problem in LLM. It may direct the user to the controversal direction. Specifically when an LLM is being trained on a large amount of data, it may generate some content that is not accurate and reliable.
+The hallucination is a common problem in LLM. It may direct the user to the controversal directions. Specifically when an LLM is being trained on a large amount of data, it may generate some content that is not accurate and reliable.
 
 Currently LLMs are being trained on a large amount of data, which is not always accurate and reliable. And the content and inference algorithm are not transparent. 
 

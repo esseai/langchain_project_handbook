@@ -5,40 +5,44 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.139.3">
     <meta name="generator" content="Relearn 7.0.1+72a875f1db967152c77914cff4d53f8fcee0e619">
-    <meta name="description" content="Using neo4j as Graph Database Installing neo4j with Docker We would need to install neo4j with docker and persist the data to the local disk.
-docker run --restart always --name=neo4j \ --publish=7474:7474 --publish=7687:7687 \ --env NEO4J_AUTH=neo4j/neo4j_password \ --volume /home/USER/neo4j_storage/data:/data \ --volume /home/USER/neo4j_storage/logs:/logs \ --volume /home/USER/neo4j_storage/import:/import \ neo4j:latest Note: we’re going to import the dataset into the database from CSV files, which would be stored in the /home/USER/neo4j_storage/import directory. Therefore, we need to create this directory before running the container. And copy the CSV files into this directory.">
+    <meta name="description" content="Setting Up Neo4j with Docker for Data Persistence To effectively set up Neo4j, we will need to install it using Docker and ensure that the data is persisted on the local disk.
+Steps for Installation and Data Import
+Install Neo4j with Docker: We will utilize Docker to install Neo4j, which simplifies the deployment process and allows for easy management of the database environment. Data Persistence: To maintain data integrity and ensure that our datasets are not lost when the container is stopped or removed, we will configure Docker to persist the data on the local disk. Preparing for Data Import: Before we can import our dataset into the Neo4j database, we must prepare the necessary directory structure:">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Using Neo4j as Graph Database :: LangChain AI">
-    <meta name="twitter:description" content="Using neo4j as Graph Database Installing neo4j with Docker We would need to install neo4j with docker and persist the data to the local disk.
-docker run --restart always --name=neo4j \ --publish=7474:7474 --publish=7687:7687 \ --env NEO4J_AUTH=neo4j/neo4j_password \ --volume /home/USER/neo4j_storage/data:/data \ --volume /home/USER/neo4j_storage/logs:/logs \ --volume /home/USER/neo4j_storage/import:/import \ neo4j:latest Note: we’re going to import the dataset into the database from CSV files, which would be stored in the /home/USER/neo4j_storage/import directory. Therefore, we need to create this directory before running the container. And copy the CSV files into this directory.">
+    <meta name="twitter:title" content="Setting up Neo4j as Graph Database :: LangChain AI">
+    <meta name="twitter:description" content="Setting Up Neo4j with Docker for Data Persistence To effectively set up Neo4j, we will need to install it using Docker and ensure that the data is persisted on the local disk.
+Steps for Installation and Data Import
+Install Neo4j with Docker: We will utilize Docker to install Neo4j, which simplifies the deployment process and allows for easy management of the database environment. Data Persistence: To maintain data integrity and ensure that our datasets are not lost when the container is stopped or removed, we will configure Docker to persist the data on the local disk. Preparing for Data Import: Before we can import our dataset into the Neo4j database, we must prepare the necessary directory structure:">
     <meta property="og:url" content="http://localhost:1313/langchain_project_book/talk_to_graph_db/using_neo4j/index.html">
     <meta property="og:site_name" content="LangChain AI">
-    <meta property="og:title" content="Using Neo4j as Graph Database :: LangChain AI">
-    <meta property="og:description" content="Using neo4j as Graph Database Installing neo4j with Docker We would need to install neo4j with docker and persist the data to the local disk.
-docker run --restart always --name=neo4j \ --publish=7474:7474 --publish=7687:7687 \ --env NEO4J_AUTH=neo4j/neo4j_password \ --volume /home/USER/neo4j_storage/data:/data \ --volume /home/USER/neo4j_storage/logs:/logs \ --volume /home/USER/neo4j_storage/import:/import \ neo4j:latest Note: we’re going to import the dataset into the database from CSV files, which would be stored in the /home/USER/neo4j_storage/import directory. Therefore, we need to create this directory before running the container. And copy the CSV files into this directory.">
+    <meta property="og:title" content="Setting up Neo4j as Graph Database :: LangChain AI">
+    <meta property="og:description" content="Setting Up Neo4j with Docker for Data Persistence To effectively set up Neo4j, we will need to install it using Docker and ensure that the data is persisted on the local disk.
+Steps for Installation and Data Import
+Install Neo4j with Docker: We will utilize Docker to install Neo4j, which simplifies the deployment process and allows for easy management of the database environment. Data Persistence: To maintain data integrity and ensure that our datasets are not lost when the container is stopped or removed, we will configure Docker to persist the data on the local disk. Preparing for Data Import: Before we can import our dataset into the Neo4j database, we must prepare the necessary directory structure:">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="article">
     <meta property="article:section" content="Talk to Your GraphDB">
     <meta property="article:published_time" content="2025-01-03T22:04:12-05:00">
     <meta property="article:modified_time" content="2025-01-03T22:04:12-05:00">
-    <meta itemprop="name" content="Using Neo4j as Graph Database :: LangChain AI">
-    <meta itemprop="description" content="Using neo4j as Graph Database Installing neo4j with Docker We would need to install neo4j with docker and persist the data to the local disk.
-docker run --restart always --name=neo4j \ --publish=7474:7474 --publish=7687:7687 \ --env NEO4J_AUTH=neo4j/neo4j_password \ --volume /home/USER/neo4j_storage/data:/data \ --volume /home/USER/neo4j_storage/logs:/logs \ --volume /home/USER/neo4j_storage/import:/import \ neo4j:latest Note: we’re going to import the dataset into the database from CSV files, which would be stored in the /home/USER/neo4j_storage/import directory. Therefore, we need to create this directory before running the container. And copy the CSV files into this directory.">
+    <meta itemprop="name" content="Setting up Neo4j as Graph Database :: LangChain AI">
+    <meta itemprop="description" content="Setting Up Neo4j with Docker for Data Persistence To effectively set up Neo4j, we will need to install it using Docker and ensure that the data is persisted on the local disk.
+Steps for Installation and Data Import
+Install Neo4j with Docker: We will utilize Docker to install Neo4j, which simplifies the deployment process and allows for easy management of the database environment. Data Persistence: To maintain data integrity and ensure that our datasets are not lost when the container is stopped or removed, we will configure Docker to persist the data on the local disk. Preparing for Data Import: Before we can import our dataset into the Neo4j database, we must prepare the necessary directory structure:">
     <meta itemprop="datePublished" content="2025-01-03T22:04:12-05:00">
     <meta itemprop="dateModified" content="2025-01-03T22:04:12-05:00">
-    <meta itemprop="wordCount" content="287">
-    <title>Using Neo4j as Graph Database :: LangChain AI</title>
-    <link href="/langchain_project_book/css/fontawesome-all.min.css?1735963265" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/fontawesome-all.min.css?1735963265" rel="stylesheet"></noscript>
-    <link href="/langchain_project_book/css/nucleus.css?1735963265" rel="stylesheet">
-    <link href="/langchain_project_book/css/auto-complete.css?1735963265" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/auto-complete.css?1735963265" rel="stylesheet"></noscript>
-    <link href="/langchain_project_book/css/perfect-scrollbar.min.css?1735963265" rel="stylesheet">
-    <link href="/langchain_project_book/css/fonts.css?1735963265" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/fonts.css?1735963265" rel="stylesheet"></noscript>
-    <link href="/langchain_project_book/css/theme.css?1735963265" rel="stylesheet">
-    <link href="/langchain_project_book/css/theme-auto.css?1735963265" rel="stylesheet" id="R-variant-style">
-    <link href="/langchain_project_book/css/chroma-auto.css?1735963265" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/langchain_project_book/css/print.css?1735963265" rel="stylesheet" media="print">
-    <script src="/langchain_project_book/js/variant.js?1735963265"></script>
+    <meta itemprop="wordCount" content="451">
+    <title>Setting up Neo4j as Graph Database :: LangChain AI</title>
+    <link href="/langchain_project_book/css/fontawesome-all.min.css?1736137738" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/fontawesome-all.min.css?1736137738" rel="stylesheet"></noscript>
+    <link href="/langchain_project_book/css/nucleus.css?1736137738" rel="stylesheet">
+    <link href="/langchain_project_book/css/auto-complete.css?1736137738" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/auto-complete.css?1736137738" rel="stylesheet"></noscript>
+    <link href="/langchain_project_book/css/perfect-scrollbar.min.css?1736137738" rel="stylesheet">
+    <link href="/langchain_project_book/css/fonts.css?1736137738" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/fonts.css?1736137738" rel="stylesheet"></noscript>
+    <link href="/langchain_project_book/css/theme.css?1736137738" rel="stylesheet">
+    <link href="/langchain_project_book/css/theme-auto.css?1736137738" rel="stylesheet" id="R-variant-style">
+    <link href="/langchain_project_book/css/chroma-auto.css?1736137738" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/langchain_project_book/css/print.css?1736137738" rel="stylesheet" media="print">
+    <script src="/langchain_project_book/js/variant.js?1736137738"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..\/..';
@@ -75,7 +79,10 @@ docker run --restart always --name=neo4j \ --publish=7474:7474 --publish=7687:76
   <ul>
     <li>
       <ul>
-        <li><a href="#using-neo4j-as-graph-database">Using <code>neo4j</code> as Graph Database</a></li>
+        <li><a href="#setting-up-neo4j-with-docker-for-data-persistence">Setting Up Neo4j with Docker for Data Persistence</a></li>
+        <li><a href="#accessing-the-neo4j-dashboard">Accessing the Neo4j Dashboard</a></li>
+        <li><a href="#important-security-considerations">Important Security Considerations</a></li>
+        <li><a href="#logging-in-to-the-dashboard">Logging In to the Dashboard</a></li>
       </ul>
     </li>
   </ul>
@@ -87,7 +94,7 @@ docker run --restart always --name=neo4j \ --publish=7474:7474 --publish=7687:76
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
             itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/langchain_project_book/index.html"><span itemprop="name">LangChain Project Handbook</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
             itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/langchain_project_book/talk_to_graph_db/index.html"><span itemprop="name">Talk to Your GraphDB</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Using Neo4j as Graph Database</span><meta itemprop="position" content="3"></li>
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Setting up Neo4j as Graph Database</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/langchain_project_book/talk_to_graph_db/arch/index.html" title="Architecture (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
@@ -112,11 +119,20 @@ docker run --restart always --name=neo4j \ --publish=7474:7474 --publish=7687:76
   <header class="headline">
   </header>
 
-<h1 id="using-neo4j-as-graph-database">Using Neo4j as Graph Database</h1>
+<h1 id="setting-up-neo4j-as-graph-database">Setting up Neo4j as Graph Database</h1>
 
-<h3 id="using-neo4j-as-graph-database">Using <code>neo4j</code> as Graph Database</h3>
-<h4 id="installing-neo4j-with-docker">Installing <code>neo4j</code> with Docker</h4>
-<p>We would need to install <code>neo4j</code> with docker and persist the data to the local disk.</p>
+<h3 id="setting-up-neo4j-with-docker-for-data-persistence">Setting Up Neo4j with Docker for Data Persistence</h3>
+<p>To effectively set up Neo4j, we will need to install it using Docker and ensure that the data is persisted on the local disk.</p>
+<p>Steps for Installation and Data Import</p>
+<ul>
+<li>Install Neo4j with Docker: We will utilize Docker to install Neo4j, which simplifies the deployment process and allows for easy management of the database environment.</li>
+<li>Data Persistence: To maintain data integrity and ensure that our datasets are not lost when the container is stopped or removed, we will configure Docker to persist the data on the local disk.</li>
+</ul>
+<p>Preparing for Data Import: Before we can import our dataset into the Neo4j database, we must prepare the necessary directory structure:</p>
+<ul>
+<li>Create Import Directory: We need to create a directory at the following path: <code>/home/USER/neo4j_storage/import</code>. This directory will serve as the designated location for storing our CSV files.</li>
+<li>Copy CSV Files: Once the import directory is created, we should copy all relevant CSV files into this location. These files will contain the data we intend to import into Neo4j.</li>
+</ul>
 <div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>docker run --restart always --name<span style="color:#f92672">=</span>neo4j <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --publish<span style="color:#f92672">=</span>7474:7474 --publish<span style="color:#f92672">=</span>7687:7687 <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --env NEO4J_AUTH<span style="color:#f92672">=</span>neo4j/neo4j_password <span style="color:#ae81ff">\
@@ -124,16 +140,19 @@ docker run --restart always --name=neo4j \ --publish=7474:7474 --publish=7687:76
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --volume /home/USER/neo4j_storage/logs:/logs <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --volume /home/USER/neo4j_storage/import:/import <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    neo4j:latest</span></span></code></pre></div>
+<h3 id="accessing-the-neo4j-dashboard">Accessing the Neo4j Dashboard</h3>
+<p>Once the Neo4j container is up and running, we can access the Neo4j dashboard by navigating to http://IP_ADDRESS:7474 in a web browser.</p>
+<h3 id="important-security-considerations">Important Security Considerations</h3>
 <blockquote>
-<p>Note: we&rsquo;re going to import the dataset into the database from CSV files, which would be stored in the <code>/home/USER/neo4j_storage/import</code> directory. Therefore, we need to create this directory before running the container. And copy the CSV files into this directory.</p>
+<p>Security Note: The Neo4j dashboard does not have built-in security features, making it unsuitable for use in a production environment. Even in a local setup, it is crucial to change the default password to enhance security.</p>
 </blockquote>
-<p>After the container is running, we can access the <code>neo4j</code> dashboard at <code>http://IP_ADDRESS:7474</code>.</p>
-<blockquote>
-<p>Security Note: The <code>neo4j</code> dashboard is not secure, so we should not use it in production environment. Even in the local environment, we should change the default password.</p>
-</blockquote>
-<p>You would see the following screen after logging in with the default credentials (username: <code>neo4j</code>, password: <code>neo4j_password</code>).</p>
-<p><a href="#R-image-174d41958cec26ff5bb27ed9ef44ca34" class="lightbox-link"><img class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="/langchain_project_book/images/2024-12-31-18-14-52.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-174d41958cec26ff5bb27ed9ef44ca34"><img class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="/langchain_project_book/images/2024-12-31-18-14-52.png"></a></p>
+<h3 id="logging-in-to-the-dashboard">Logging In to the Dashboard</h3>
+<p>Upon accessing the dashboard, you will be prompted to log in using the default credentials:
+Username: <code>neo4j</code>
+Password: <code>neo4j_password</code>
+After entering these credentials, you will be directed to the main interface of the Neo4j dashboard, where you can begin managing your database.</p>
+<p><a href="#R-image-e8a8645297c792d81b9d905a69c31a7a" class="lightbox-link"><img class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="/langchain_project_book/images/2024-12-31-18-14-52.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e8a8645297c792d81b9d905a69c31a7a"><img class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="/langchain_project_book/images/2024-12-31-18-14-52.png"></a></p>
 <p>All the data would be stored in the <code>/home/USER/neo4j_storage/data</code> directory permanently. In order to make this document simple, I&rsquo;m going to use the default database.</p>
 <h4 id="importing-data">Importing Data</h4>
 <p>There are multiple ways to import data into the database. We can use the <code>neo4j</code> dashboard to import the data, or use the <code>cypher</code> script to import the data. I list the simple steps to import the data into the database from dashboard.</p>
@@ -171,7 +190,7 @@ LangChain AI
           </a>
         </div>
         <script>
-          window.index_js_url="/langchain_project_book/searchindex.js?1735963265";
+          window.index_js_url="/langchain_project_book/searchindex.js?1736137738";
         </script>
         <search><form action="/langchain_project_book/search/index.html" method="get">
           <div class="searchbox default-animation">
@@ -184,12 +203,12 @@ LangChain AI
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/langchain_project_book/js/auto-complete.js?1735963265" defer></script>
-        <script src="/langchain_project_book/js/lunr/lunr.min.js?1735963265" defer></script>
-        <script src="/langchain_project_book/js/lunr/lunr.stemmer.support.min.js?1735963265" defer></script>
-        <script src="/langchain_project_book/js/lunr/lunr.multi.min.js?1735963265" defer></script>
-        <script src="/langchain_project_book/js/lunr/lunr.en.min.js?1735963265" defer></script>
-        <script src="/langchain_project_book/js/search.js?1735963265" defer></script>
+        <script src="/langchain_project_book/js/auto-complete.js?1736137738" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.min.js?1736137738" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.stemmer.support.min.js?1736137738" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.multi.min.js?1736137738" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.en.min.js?1736137738" defer></script>
+        <script src="/langchain_project_book/js/search.js?1736137738" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation homelinks">
         <ul>
@@ -208,7 +227,7 @@ LangChain AI
             <li class="" data-nav-id="/langchain_project_book/knowledgebase_semantic_analysis/index.html"><a class="padding" href="/langchain_project_book/knowledgebase_semantic_analysis/index.html">KnowledgeBase Semantic Analysis</a><ul id="R-subsections-c052591330c8f18d93a5e1634f9733d5" class="collapsible-menu"></ul></li>
             <li class="parent " data-nav-id="/langchain_project_book/talk_to_graph_db/index.html"><a class="padding" href="/langchain_project_book/talk_to_graph_db/index.html">Talk to Your GraphDB</a><ul id="R-subsections-fa3f1170a32373889fae3b34b9432ee4" class="collapsible-menu">
             <li class="" data-nav-id="/langchain_project_book/talk_to_graph_db/arch/index.html"><a class="padding" href="/langchain_project_book/talk_to_graph_db/arch/index.html">Architecture</a></li>
-            <li class="active " data-nav-id="/langchain_project_book/talk_to_graph_db/using_neo4j/index.html"><a class="padding" href="/langchain_project_book/talk_to_graph_db/using_neo4j/index.html">Using Neo4j as Graph Database</a></li>
+            <li class="active " data-nav-id="/langchain_project_book/talk_to_graph_db/using_neo4j/index.html"><a class="padding" href="/langchain_project_book/talk_to_graph_db/using_neo4j/index.html">Setting up Neo4j as Graph Database</a></li>
             <li class="" data-nav-id="/langchain_project_book/talk_to_graph_db/config_llm/index.html"><a class="padding" href="/langchain_project_book/talk_to_graph_db/config_llm/index.html">Configuring LLM</a></li>
             <li class="" data-nav-id="/langchain_project_book/talk_to_graph_db/config_neo4j_lc/index.html"><a class="padding" href="/langchain_project_book/talk_to_graph_db/config_neo4j_lc/index.html">Configuring Neo4j with LangChain</a></li>
             <li class="" data-nav-id="/langchain_project_book/talk_to_graph_db/summary/index.html"><a class="padding" href="/langchain_project_book/talk_to_graph_db/summary/index.html">Summary</a></li></ul></li>
@@ -265,8 +284,8 @@ LangChain AI
         </div>
       </div>
     </aside>
-    <script src="/langchain_project_book/js/clipboard.min.js?1735963265" defer></script>
-    <script src="/langchain_project_book/js/perfect-scrollbar.min.js?1735963265" defer></script>
-    <script src="/langchain_project_book/js/theme.js?1735963265" defer></script>
+    <script src="/langchain_project_book/js/clipboard.min.js?1736137738" defer></script>
+    <script src="/langchain_project_book/js/perfect-scrollbar.min.js?1736137738" defer></script>
+    <script src="/langchain_project_book/js/theme.js?1736137738" defer></script>
   </body>
 </html>
