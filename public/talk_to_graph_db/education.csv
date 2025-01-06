@@ -1,21 +1,21 @@
-Name,School,Major,Degree
-Alice Johnson,Havard University,Psychology,Bachelor's
-Bob Smith,Yale University,Business Administration,Bachelor's
-Catherine Lee,UCLA,Biology,Bachelor's
-David Brown,Cambridge University,Literature Master's 
-Eva Green,Northeastern University,Chemistry,Bachelor's 
-Frank White,Penn State University,Civil Engineering,Bachelor's 
-Grace Chen,UChicago,Economics,Bachelor's 
-Henry Adams,MIT Computer Science,Bachelor's 
-Ivy Patel,Duke University,Nursing,Bachelor's 
-James Wilson,Cornell University,Agriculture,Bachelor's 
-Katherine Davis,UCBerkeley,Sociology,Bachelor's 
-Liam Thompson,Rice University,Aerospace Engineering,Bachelor's 
-Mia Garcia,Texas A&M University,Psychology,Bachelor's 
-Nathan Martinez,UCLA,Cultural Studies,Bachelor's 
-Olivia Taylor,Wisconsin-Madison University,Linguistics,Bachelor's 
-Paul Robinson,UVA,Higher Education Master's 
-Quinn Harris,NW University,Psychiatry Master's 
-Ryan Clark,UConn,Chemistry Bachelor's 
-Sophia Lewis,Nebraska University,Chemistry Bachelor's 
-Thomas Walker,Wisconsin-Madison University,Law Bachelor's 
+name,school,major,degree
+Alice Johnson,University of California, Berkeley,Computer Science,Bachelor
+Brian Smith,Harvard University,Business Administration,Master
+Carla Martinez,Stanford University,Psychology,Bachelor
+David Lee,Yale University,Electrical Engineering,Doctor
+Emily Chen,University of Michigan,Ann Arbor,Biology,Bachelor
+Frank Wilson,Cornell University,Chemistry,Master
+Grace Kim,University of Texas at Austin,Nursing,Bachelor
+Henry Brown,Columbia University,Political Science,Master
+Isabella Garcia,UCLA,Art History,Bachelor
+James Rodriguez,Duke University,Literature,Doctor
+Karen Davis,Northeastern University,Cybersecurity,Bachelor
+Liam Thompson,Penn State University,Agricultural Science,Master
+Mia Anderson,University of Florida,Environmental Science,Bachelor
+Noah Taylor,Michigan State University,Mathematics,Bachelor
+Olivia Martinez,Wisconsin-Madison University,Kinesiology,Master
+Paul White,Rice University,Aerospace Engineering,Bachelor
+Quinn Harris,Syracuse University,Sociology,Bachelor
+Ryan Clark,Boston University,MBA (Business),Master
+Sophia Lewis,Vanderbilt University,Nutrition Science,Bachelor
+Tyler Young,Cleveland State University,Law,Doctor

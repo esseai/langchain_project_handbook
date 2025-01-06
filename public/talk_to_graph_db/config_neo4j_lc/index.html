@@ -7,19 +7,19 @@
     <meta name="generator" content="Relearn 7.0.1+72a875f1db967152c77914cff4d53f8fcee0e619">
     <meta name="description" content="Configuring neo4j with langchain To communicate with a Neo4j graph database through a Large Language Model (LLM), you can leverage integration frameworks such as LangChain. Here’s how you can set up this interaction:
 Integrate Neo4j with LangChain LangChain provides a robust framework for integrating LLMs with various data sources, including Neo4j. You can install the necessary packages using pip:
-pip install langchain langchain-community langchain-neo4j neo This installation will allow you to utilize Langchain’s capabilities to interact with your Neo4j database.">
+# pip install langchain langchain-community langchain-neo4j neo pip install neo4j langchain-neo4j This installation will allow you to utilize Langchain’s capabilities to interact with your Neo4j database.">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Configuring Neo4j with LangChain :: LangChain AI">
     <meta name="twitter:description" content="Configuring neo4j with langchain To communicate with a Neo4j graph database through a Large Language Model (LLM), you can leverage integration frameworks such as LangChain. Here’s how you can set up this interaction:
 Integrate Neo4j with LangChain LangChain provides a robust framework for integrating LLMs with various data sources, including Neo4j. You can install the necessary packages using pip:
-pip install langchain langchain-community langchain-neo4j neo This installation will allow you to utilize Langchain’s capabilities to interact with your Neo4j database.">
+# pip install langchain langchain-community langchain-neo4j neo pip install neo4j langchain-neo4j This installation will allow you to utilize Langchain’s capabilities to interact with your Neo4j database.">
     <meta property="og:url" content="http://localhost:1313/langchain_project_book/talk_to_graph_db/config_neo4j_lc/index.html">
     <meta property="og:site_name" content="LangChain AI">
     <meta property="og:title" content="Configuring Neo4j with LangChain :: LangChain AI">
     <meta property="og:description" content="Configuring neo4j with langchain To communicate with a Neo4j graph database through a Large Language Model (LLM), you can leverage integration frameworks such as LangChain. Here’s how you can set up this interaction:
 Integrate Neo4j with LangChain LangChain provides a robust framework for integrating LLMs with various data sources, including Neo4j. You can install the necessary packages using pip:
-pip install langchain langchain-community langchain-neo4j neo This installation will allow you to utilize Langchain’s capabilities to interact with your Neo4j database.">
+# pip install langchain langchain-community langchain-neo4j neo pip install neo4j langchain-neo4j This installation will allow you to utilize Langchain’s capabilities to interact with your Neo4j database.">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="article">
     <meta property="article:section" content="Talk to Your GraphDB">
@@ -28,21 +28,21 @@ pip install langchain langchain-community langchain-neo4j neo This installation 
     <meta itemprop="name" content="Configuring Neo4j with LangChain :: LangChain AI">
     <meta itemprop="description" content="Configuring neo4j with langchain To communicate with a Neo4j graph database through a Large Language Model (LLM), you can leverage integration frameworks such as LangChain. Here’s how you can set up this interaction:
 Integrate Neo4j with LangChain LangChain provides a robust framework for integrating LLMs with various data sources, including Neo4j. You can install the necessary packages using pip:
-pip install langchain langchain-community langchain-neo4j neo This installation will allow you to utilize Langchain’s capabilities to interact with your Neo4j database.">
+# pip install langchain langchain-community langchain-neo4j neo pip install neo4j langchain-neo4j This installation will allow you to utilize Langchain’s capabilities to interact with your Neo4j database.">
     <meta itemprop="datePublished" content="2025-01-03T22:04:12-05:00">
     <meta itemprop="dateModified" content="2025-01-03T22:04:12-05:00">
-    <meta itemprop="wordCount" content="322">
+    <meta itemprop="wordCount" content="364">
     <title>Configuring Neo4j with LangChain :: LangChain AI</title>
-    <link href="/langchain_project_book/css/fontawesome-all.min.css?1736139024" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/fontawesome-all.min.css?1736139024" rel="stylesheet"></noscript>
-    <link href="/langchain_project_book/css/nucleus.css?1736139024" rel="stylesheet">
-    <link href="/langchain_project_book/css/auto-complete.css?1736139024" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/auto-complete.css?1736139024" rel="stylesheet"></noscript>
-    <link href="/langchain_project_book/css/perfect-scrollbar.min.css?1736139024" rel="stylesheet">
-    <link href="/langchain_project_book/css/fonts.css?1736139024" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/fonts.css?1736139024" rel="stylesheet"></noscript>
-    <link href="/langchain_project_book/css/theme.css?1736139024" rel="stylesheet">
-    <link href="/langchain_project_book/css/theme-auto.css?1736139024" rel="stylesheet" id="R-variant-style">
-    <link href="/langchain_project_book/css/chroma-auto.css?1736139024" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/langchain_project_book/css/print.css?1736139024" rel="stylesheet" media="print">
-    <script src="/langchain_project_book/js/variant.js?1736139024"></script>
+    <link href="/langchain_project_book/css/fontawesome-all.min.css?1736152622" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/fontawesome-all.min.css?1736152622" rel="stylesheet"></noscript>
+    <link href="/langchain_project_book/css/nucleus.css?1736152622" rel="stylesheet">
+    <link href="/langchain_project_book/css/auto-complete.css?1736152622" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/auto-complete.css?1736152622" rel="stylesheet"></noscript>
+    <link href="/langchain_project_book/css/perfect-scrollbar.min.css?1736152622" rel="stylesheet">
+    <link href="/langchain_project_book/css/fonts.css?1736152622" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/fonts.css?1736152622" rel="stylesheet"></noscript>
+    <link href="/langchain_project_book/css/theme.css?1736152622" rel="stylesheet">
+    <link href="/langchain_project_book/css/theme-auto.css?1736152622" rel="stylesheet" id="R-variant-style">
+    <link href="/langchain_project_book/css/chroma-auto.css?1736152622" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/langchain_project_book/css/print.css?1736152622" rel="stylesheet" media="print">
+    <script src="/langchain_project_book/js/variant.js?1736152622"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..\/..';
@@ -122,34 +122,35 @@ pip install langchain langchain-community langchain-neo4j neo This installation 
 <p>To communicate with a Neo4j graph database through a Large Language Model (LLM), you can leverage integration frameworks such as LangChain. Here’s how you can set up this interaction:</p>
 <h4 id="integrate-neo4j-with-langchain">Integrate Neo4j with LangChain</h4>
 <p>LangChain provides a robust framework for integrating LLMs with various data sources, including Neo4j. You can install the necessary packages using pip:</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install langchain langchain-community langchain-neo4j neo</span></span></code></pre></div>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># pip install langchain langchain-community langchain-neo4j neo</span>
+</span></span><span style="display:flex;"><span>pip install neo4j langchain-neo4j</span></span></code></pre></div>
 <p>This installation will allow you to utilize Langchain&rsquo;s capabilities to interact with your Neo4j database.</p>
 <h4 id="set-up-connection-to-neo4j">Set Up Connection to Neo4j</h4>
 <p>You need to establish a connection between your application and the Neo4j database. This typically involves specifying the database URI and authentication credentials.</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain_neo4j <span style="color:#f92672">import</span> Neo4jGraph
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Example connection string</span>
-</span></span><span style="display:flex;"><span>neo4j_graph <span style="color:#f92672">=</span> Neo4jGraph(
-</span></span><span style="display:flex;"><span>    uri<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bolt://localhost:7687&#34;</span>,
-</span></span><span style="display:flex;"><span>    user<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;neo4j&#34;</span>,
-</span></span><span style="display:flex;"><span>    password<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;your_password&#34;</span>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain_neo4j <span style="color:#f92672">import</span> Neo4jGraph, Neo4jVector, GraphCypherQAChain
+</span></span><span style="display:flex;"><span>graph <span style="color:#f92672">=</span> Neo4jGraph(
+</span></span><span style="display:flex;"><span>    url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bolt://NEO4J_HOST:7687&#34;</span>,
+</span></span><span style="display:flex;"><span>    username<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;neo4j&#34;</span>,
+</span></span><span style="display:flex;"><span>    password<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;neo4j_password&#34;</span>,
 </span></span><span style="display:flex;"><span>)</span></span></code></pre></div>
-<h4 id="use-cypher-queries">Use Cypher Queries</h4>
-<p>Once connected, you can use Cypher queries to perform operations on your graph database. You can formulate queries based on user input or predefined templates.</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>query <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;MATCH (p:Person) RETURN p.name, p.income&#34;</span>
-</span></span><span style="display:flex;"><span>results <span style="color:#f92672">=</span> neo4j_graph<span style="color:#f92672">.</span>run(query)</span></span></code></pre></div>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h4 id="incorporate-llm-for-natural-language-processing">Incorporate LLM for Natural Language Processing</h4>
-<p>You can utilize an LLM (like OpenAI&rsquo;s models) to process natural language queries from users and convert them into Cypher queries that can be executed against the Neo4j database.</p>
-<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain.llms <span style="color:#f92672">import</span> OpenAI
+<p>You can utilize an LLM (like Mistral&rsquo;s models from HuggingFace for 100% free and open-source) to process natural language queries from users and convert them into Cypher queries that can be executed against the Neo4j database.</p>
+<blockquote>
+<p>Note: You need to set up your HuggingFace API token in your environment variable before running the code.</p>
+</blockquote>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>HUGGINGFACEHUB_API_TOKEN <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getenv(<span style="color:#e6db74">&#34;HUGGINGFACEHUB_API_TOKEN&#34;</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>llm <span style="color:#f92672">=</span> OpenAI(api_key<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;your_openai_api_key&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Example user question</span>
-</span></span><span style="display:flex;"><span>user_question <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;What is the income of Alice Johnson?&#34;</span>
-</span></span><span style="display:flex;"><span>cypher_query <span style="color:#f92672">=</span> llm<span style="color:#f92672">.</span>generate_cypher(user_question)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Execute the generated query</span>
-</span></span><span style="display:flex;"><span>results <span style="color:#f92672">=</span> neo4j_graph<span style="color:#f92672">.</span>run(cypher_query)</span></span></code></pre></div>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain_huggingface <span style="color:#f92672">import</span> HuggingFaceEndpoint
+</span></span><span style="display:flex;"><span>repo_id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mistralai/Mistral-7B-Instruct-v0.2&#34;</span>
+</span></span><span style="display:flex;"><span>llm <span style="color:#f92672">=</span> HuggingFaceEndpoint(
+</span></span><span style="display:flex;"><span>    repo_id <span style="color:#f92672">=</span> repo_id,
+</span></span><span style="display:flex;"><span>    temperature <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>,
+</span></span><span style="display:flex;"><span>    huggingfacehub_api_token<span style="color:#f92672">=</span>HUGGINGFACEHUB_API_TOKEN,
+</span></span><span style="display:flex;"><span>    max_new_tokens <span style="color:#f92672">=</span> <span style="color:#ae81ff">250</span>,
+</span></span><span style="display:flex;"><span>)</span></span></code></pre></div>
 <h4 id="implement-retrieval-augmented-generation-rag">Implement Retrieval-Augmented Generation (RAG)</h4>
 <p>You can enhance the interaction by implementing Retrieval-Augmented Generation (RAG), which allows the LLM to ground its responses in the factual data stored in the graph. This helps reduce misinformation or &ldquo;hallucinations&rdquo; by ensuring that the model&rsquo;s outputs are based on verified data.</p>
 <ul>
@@ -158,6 +159,34 @@ pip install langchain langchain-community langchain-neo4j neo This installation 
 </ul>
 <h4 id="explore-graph-data">Explore Graph Data</h4>
 <p>You can also visualize and explore the graph data using tools like Neo4j Bloom or integrate it into your application for dynamic interactions.</p>
+<h4 id="the-complete-code">The Complete Code</h4>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain_neo4j <span style="color:#f92672">import</span> Neo4jGraph, Neo4jVector, GraphCypherQAChain
+</span></span><span style="display:flex;"><span>graph <span style="color:#f92672">=</span> Neo4jGraph(
+</span></span><span style="display:flex;"><span>    url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bolt://NEO4J_HOST:7687&#34;</span>,
+</span></span><span style="display:flex;"><span>    username<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;neo4j&#34;</span>,
+</span></span><span style="display:flex;"><span>    password<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;neo4j_password&#34;</span>,
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span>HUGGINGFACEHUB_API_TOKEN <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getenv(<span style="color:#e6db74">&#34;HUGGINGFACEHUB_API_TOKEN&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> langchain_huggingface <span style="color:#f92672">import</span> HuggingFaceEndpoint
+</span></span><span style="display:flex;"><span>repo_id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mistralai/Mistral-7B-Instruct-v0.2&#34;</span>
+</span></span><span style="display:flex;"><span>llm <span style="color:#f92672">=</span> HuggingFaceEndpoint(
+</span></span><span style="display:flex;"><span>    repo_id <span style="color:#f92672">=</span> repo_id,
+</span></span><span style="display:flex;"><span>    temperature <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.5</span>,
+</span></span><span style="display:flex;"><span>    huggingfacehub_api_token<span style="color:#f92672">=</span>HUGGINGFACEHUB_API_TOKEN,
+</span></span><span style="display:flex;"><span>    max_new_tokens <span style="color:#f92672">=</span> <span style="color:#ae81ff">250</span>,
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>chain <span style="color:#f92672">=</span> GraphCypherQAChain<span style="color:#f92672">.</span>from_llm(
+</span></span><span style="display:flex;"><span>    llm, 
+</span></span><span style="display:flex;"><span>    graph<span style="color:#f92672">=</span>graph,
+</span></span><span style="display:flex;"><span>    verbose<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>    allow_dangerous_requests<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(chain<span style="color:#f92672">.</span>invoke(<span style="color:#e6db74">&#34;What is the income of Olivia Martinez?&#34;</span>))</span></span></code></pre></div>
 
   <footer class="footline">
   </footer>
@@ -174,7 +203,7 @@ LangChain AI
           </a>
         </div>
         <script>
-          window.index_js_url="/langchain_project_book/searchindex.js?1736139024";
+          window.index_js_url="/langchain_project_book/searchindex.js?1736152622";
         </script>
         <search><form action="/langchain_project_book/search/index.html" method="get">
           <div class="searchbox default-animation">
@@ -187,12 +216,12 @@ LangChain AI
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/langchain_project_book/js/auto-complete.js?1736139024" defer></script>
-        <script src="/langchain_project_book/js/lunr/lunr.min.js?1736139024" defer></script>
-        <script src="/langchain_project_book/js/lunr/lunr.stemmer.support.min.js?1736139024" defer></script>
-        <script src="/langchain_project_book/js/lunr/lunr.multi.min.js?1736139024" defer></script>
-        <script src="/langchain_project_book/js/lunr/lunr.en.min.js?1736139024" defer></script>
-        <script src="/langchain_project_book/js/search.js?1736139024" defer></script>
+        <script src="/langchain_project_book/js/auto-complete.js?1736152622" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.min.js?1736152622" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.stemmer.support.min.js?1736152622" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.multi.min.js?1736152622" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.en.min.js?1736152622" defer></script>
+        <script src="/langchain_project_book/js/search.js?1736152622" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation homelinks">
         <ul>
@@ -211,6 +240,7 @@ LangChain AI
             <li class="" data-nav-id="/langchain_project_book/knowledgebase_semantic_analysis/index.html"><a class="padding" href="/langchain_project_book/knowledgebase_semantic_analysis/index.html">KnowledgeBase Semantic Analysis</a><ul id="R-subsections-c052591330c8f18d93a5e1634f9733d5" class="collapsible-menu"></ul></li>
             <li class="parent " data-nav-id="/langchain_project_book/talk_to_graph_db/index.html"><a class="padding" href="/langchain_project_book/talk_to_graph_db/index.html">Talk to Your GraphDB</a><ul id="R-subsections-fa3f1170a32373889fae3b34b9432ee4" class="collapsible-menu">
             <li class="" data-nav-id="/langchain_project_book/talk_to_graph_db/arch/index.html"><a class="padding" href="/langchain_project_book/talk_to_graph_db/arch/index.html">Architecture</a></li>
+            <li class="" data-nav-id="/langchain_project_book/talk_to_graph_db/prepare_dataset/index.html"><a class="padding" href="/langchain_project_book/talk_to_graph_db/prepare_dataset/index.html">Preparing DataSet</a></li>
             <li class="" data-nav-id="/langchain_project_book/talk_to_graph_db/setup_neo4j/index.html"><a class="padding" href="/langchain_project_book/talk_to_graph_db/setup_neo4j/index.html">Setting up Neo4j as Graph Database</a></li>
             <li class="" data-nav-id="/langchain_project_book/talk_to_graph_db/config_llm/index.html"><a class="padding" href="/langchain_project_book/talk_to_graph_db/config_llm/index.html">Configuring LLM</a></li>
             <li class="active " data-nav-id="/langchain_project_book/talk_to_graph_db/config_neo4j_lc/index.html"><a class="padding" href="/langchain_project_book/talk_to_graph_db/config_neo4j_lc/index.html">Configuring Neo4j with LangChain</a></li>
@@ -268,8 +298,8 @@ LangChain AI
         </div>
       </div>
     </aside>
-    <script src="/langchain_project_book/js/clipboard.min.js?1736139024" defer></script>
-    <script src="/langchain_project_book/js/perfect-scrollbar.min.js?1736139024" defer></script>
-    <script src="/langchain_project_book/js/theme.js?1736139024" defer></script>
+    <script src="/langchain_project_book/js/clipboard.min.js?1736152622" defer></script>
+    <script src="/langchain_project_book/js/perfect-scrollbar.min.js?1736152622" defer></script>
+    <script src="/langchain_project_book/js/theme.js?1736152622" defer></script>
   </body>
 </html>

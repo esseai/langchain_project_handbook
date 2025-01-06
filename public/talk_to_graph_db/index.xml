@@ -16,6 +16,13 @@
       <description>Architecture Proposed Solution for Data Management and Visualization To address the client’s needs, I propose implementing an approach that combines the following elements:&#xA;Utilizing neo4j as a Graph Database and Vector Store: We will leverage neo4j not only as a graph database but also as a Vector Store to import the client’s datasets. This will facilitate advanced graph visualizations, allowing for a clearer understanding of data relationships.&#xA;Running neo4j as a Service in Docker: By deploying Neo4j within a Docker container, we can provide a reliable and scalable graph database service. This setup will ensure that the database is easily accessible and manageable, enhancing performance and security.</description>
     </item>
     <item>
+      <title>Preparing DataSet</title>
+      <link>http://localhost:1313/langchain_project_book/talk_to_graph_db/prepare_dataset/index.html</link>
+      <pubDate>Fri, 03 Jan 2025 22:04:12 -0500</pubDate>
+      <guid>http://localhost:1313/langchain_project_book/talk_to_graph_db/prepare_dataset/index.html</guid>
+      <description>Preparing DataSet To ensure the confidentiality of client data, I have opted to simulate a dataset that represents profiles of individuals. This simulated dataset includes key attributes such as names, ages, genders, and incomes. Additionally, I have created a corresponding list of educational backgrounds that aligns with the first dataset, detailing each individual’s education about the schools they attended, majors, and degrees.&#xA;I’m using Perplexity.ai to generate the data set, with the following prompt</description>
+    </item>
+    <item>
       <title>Setting up Neo4j as Graph Database</title>
       <link>http://localhost:1313/langchain_project_book/talk_to_graph_db/setup_neo4j/index.html</link>
       <pubDate>Fri, 03 Jan 2025 22:04:12 -0500</pubDate>
@@ -34,7 +41,7 @@
       <link>http://localhost:1313/langchain_project_book/talk_to_graph_db/config_neo4j_lc/index.html</link>
       <pubDate>Fri, 03 Jan 2025 22:04:12 -0500</pubDate>
       <guid>http://localhost:1313/langchain_project_book/talk_to_graph_db/config_neo4j_lc/index.html</guid>
-      <description>Configuring neo4j with langchain To communicate with a Neo4j graph database through a Large Language Model (LLM), you can leverage integration frameworks such as LangChain. Here’s how you can set up this interaction:&#xA;Integrate Neo4j with LangChain LangChain provides a robust framework for integrating LLMs with various data sources, including Neo4j. You can install the necessary packages using pip:&#xA;pip install langchain langchain-community langchain-neo4j neo This installation will allow you to utilize Langchain’s capabilities to interact with your Neo4j database.</description>
+      <description>Configuring neo4j with langchain To communicate with a Neo4j graph database through a Large Language Model (LLM), you can leverage integration frameworks such as LangChain. Here’s how you can set up this interaction:&#xA;Integrate Neo4j with LangChain LangChain provides a robust framework for integrating LLMs with various data sources, including Neo4j. You can install the necessary packages using pip:&#xA;# pip install langchain langchain-community langchain-neo4j neo pip install neo4j langchain-neo4j This installation will allow you to utilize Langchain’s capabilities to interact with your Neo4j database.</description>
     </item>
     <item>
       <title>Summary</title>

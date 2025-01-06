@@ -24,6 +24,7 @@ Preparing for Data Import: Before we can import our dataset into the Neo4j datab
 ```sh
 docker run --restart always --name=neo4j \
     --publish=7474:7474 --publish=7687:7687 \
+    --env NEO4J_PLUGINS=\[\"apoc\"\] \
     --env NEO4J_AUTH=neo4j/neo4j_password \
     --volume /home/USER/neo4j_storage/data:/data \
     --volume /home/USER/neo4j_storage/logs:/logs \
@@ -63,7 +64,7 @@ Using the Neo4j dashboard to import data is an intuitive option, especially for 
 - Verify Imported Data: After the import is finished, you can run queries in the dashboard to verify that your data has been successfully imported and is accurately represented in the database.
 
 Or from the dashboard, perform the following script to import the data:
-
+<!-- 
 1. Import Income Data:
 ```sh
 LOAD CSV WITH HEADERS FROM 'file:///income.csv' AS row
@@ -81,4 +82,60 @@ CREATE (:Education {name: row.Name, school: row.School, major: row.Major, degree
 MATCH (p:Person), (e:Education)
 WHERE p.name = e.name
 CREATE (p)-[:EDUCATED_AT]->(e);
+``` -->
+
+
+Step 1: Import Data from income.csv
+First, import the data from the `income.csv` file and create nodes for each individual. Use the following Cypher query:
+
+```text
+LOAD CSV WITH HEADERS FROM 'file:///income.csv' AS row
+MERGE (p:Person {name: row.name})
+SET p.age = toInteger(row.age),
+    p.gender = row.gender,
+    p.income = toFloat(row.income);
 ```
+
+Step 2: Import Data from education.csv
+Next, import the data from the `education.csv` file and create nodes for each education record:
+
+```text
+LOAD CSV WITH HEADERS FROM 'file:///education.csv' AS row
+MERGE (e:Education {name: row.name, school: row.school, major: row.major, degree: row.degree});
+```
+
+Step 3: Create Relationships
+Now that you have both Person and Education nodes, you can create the specified relationships. You will need to establish relationships between income and gender, age, school, and degree. Here’s how to do it:
+
+1. Create Relationship Between Gender and Income
+
+```text
+MATCH (p:Person)
+MERGE (g:Gender {value: p.gender})
+MERGE (p)-[:HAS_GENDER]->(g);
+```
+
+2. Create Relationship Between School and Income
+
+```text
+MATCH (p:Person)-[:HAS_EDUCATION]->(e:Education)
+MERGE (s:School {name: e.school})
+MERGE (e)-[:ATTENDS]->(s);
+```
+
+3. Create Relationship Between Age and Income
+
+```text
+MATCH (p:Person)
+MERGE (a:Age {value: p.age})
+MERGE (p)-[:HAS_AGE]->(a);
+```
+
+4. Create Relationship Between Degree and Income
+
+```text
+MATCH (p:Person)-[:HAS_EDUCATION]->(e:Education)
+MERGE (d:Degree {value: e.degree})
+MERGE (e)-[:HAS_DEGREE]->(d);
+```
+
