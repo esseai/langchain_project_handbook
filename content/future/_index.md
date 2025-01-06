@@ -6,46 +6,32 @@ type = 'chapter'
 weight = 8
 +++
 
-### LangChain and LLM are not Silver Bullet. 
+### Understanding the Limitations of LangChain and LLMs
+It is important to note that neither LangChain nor LLMs are silver bullets; they are not flawless solutions, and there remain several areas in which improvements can be made. The field of artificial intelligence, particularly generative AI, is expanding rapidly, with a burgeoning community that is driving innovation at an unprecedented pace. This growth is not only unstoppable but also indicative of a vibrant environment where experimentation and exploration of AI's potential are ongoing. 
 
-They are not perfect and there are some areas that can be improved. 
+However, this rapid evolution comes with challenges. Many APIs are subject to frequent changes, highlighting that developers may not always have a fully formed vision from the outset. Consequently, there is much work ahead for LangChain, including debugging, enhancing documentation, and fostering community engagement.
 
-The community of AI, or Generative AI, are growing fast and the technology is evolving rapidly. The growth of the community is unstoppable.
 
-They're still experimenting and exploring the potential of AI. Some of the APIs are changing too frequently. That indicates the technology is evolving rapidly and the designer might not have a clear ideas from the beginning, reasonably.
+### Addressing Hallucination in LLMs
 
-LangChain has a lot of works to do including debug, documentation and maintain the community.
+A significant challenge associated with LLMs is the phenomenon known as "hallucination," where models generate content that may be inaccurate or misleading. This issue arises particularly when LLMs are trained on vast datasets that are not consistently reliable. The lack of transparency in both the content and the inference algorithms further complicates matters. Personally, I approach some LLMs with skepticism, as I am aware that the data used for training can be biased—reflecting specific political or cultural perspectives based on the choices made by data curators.
 
-### Hallucination
 
-The hallucination is a common problem in LLM. It may direct the user to the controversal directions. Specifically when an LLM is being trained on a large amount of data, it may generate some content that is not accurate and reliable.
+### The Future of Agentic AI
 
-Currently LLMs are being trained on a large amount of data, which is not always accurate and reliable. And the content and inference algorithm are not transparent. 
+Currently, LangChain serves as an excellent framework for building applications utilizing LLMs. However, it is not without its flaws and has room for improvement. Future iterations could focus on managing and orchestrating agents, tools, and models more effectively. The vision for agentic AI involves systems that can emulate human thought processes and decision-making abilities. Such advancements would enable AI to handle more complex tasks and scenarios while understanding user intent and executing tasks accordingly. I often joke with my CEO that administrative roles—those responsible for managing PowerPoint presentations and Excel spreadsheets—could eventually be replaced by AI.
 
-Honestly I don't trust some of the LLM from beginning as I'm sure the data fed into the LLM during training is particularly biased, in terms of politics, culture, and etc, which are based on the data selector's perspective and value proposition.
+### Engaging with the Open Source Community
+To maximize your learning experience with LangChain, I recommend the following:
 
-### Agentic AI
+- Stay Updated: Keep an eye on developments and updates related to LangChain.
+- Gain Practical Experience: Engage in hands-on practice with LangChain to deepen your understanding.
+- Seek Community Support: Utilize resources such as StackOverflow, Reddit, LangChain’s Discord server, and its GitHub repository for assistance.
 
-The current LangChain is a great framework for building LLM applications. However, it is not perfect and there are some areas that can be improved.
+As for my personal approach:
 
-It would turn to manage and orchestrate agents, tools, and models.
+- I am committed to making everything open source.
+- I actively explore the potential of AI driven by my curiosity.
+- I share my experiences and insights with the community to foster collective learning.
 
-It would emulate the human's thinking process and decision-making process.
-
-It would be able to handle more complex tasks and scenarios.
-
-I believe the future of AI is agentic AI, which is able to understand the user's intent and execute the task accordingly. And it would intentionally replace human's work in the future. I used to talk to my company's CEO about this and made a joke that all the administrators, who handle and process PowerPoint and Excel files, sitting at the entire floor 5 in the company would be replaced by AI.
-
-### Get Involved in Open Source Community
-
-My recommendation is to
-
-- Keep watching the LangChain's development and updates
-- Get hands-on experience with LangChain
-- Get support from the community, such as StackOverflow, Reddit, LangChain's Discord, and LangChain's GitHub repository
-
-What I'm doing is to
-- Make everything open source
-- Explore the potential of AI with my high curiosity
-- Share my experience and insights with the community
-
+In conclusion, while there are challenges ahead in the realm of LangChain and LLMs, there are also exciting opportunities for growth and innovation. Engaging with these technologies through open-source collaboration can lead to meaningful advancements in the field of artificial intelligence.
