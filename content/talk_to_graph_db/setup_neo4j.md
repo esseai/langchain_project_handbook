@@ -46,6 +46,8 @@ After entering these credentials, you will be directed to the main interface of 
 
 ![](images/2024-12-31-18-14-52.png)
 
+Figure 7.2: Neo4j Dashboard
+
 All data generated and managed by Neo4j will be permanently stored in the `/home/USER/neo4j_storage/data` directory. For the sake of simplicity in this document, I will utilize the default database provided by Neo4j.
 
 

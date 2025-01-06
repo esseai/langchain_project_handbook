@@ -31,18 +31,18 @@ Steps for Installation and Data Import
 Install Neo4j with Docker: We will utilize Docker to install Neo4j, which simplifies the deployment process and allows for easy management of the database environment. Data Persistence: To maintain data integrity and ensure that our datasets are not lost when the container is stopped or removed, we will configure Docker to persist the data on the local disk. Preparing for Data Import: Before we can import our dataset into the Neo4j database, we must prepare the necessary directory structure:">
     <meta itemprop="datePublished" content="2025-01-03T22:04:12-05:00">
     <meta itemprop="dateModified" content="2025-01-03T22:04:12-05:00">
-    <meta itemprop="wordCount" content="780">
+    <meta itemprop="wordCount" content="784">
     <title>Setting up Neo4j as Graph Database :: LangChain AI</title>
-    <link href="/langchain_project_book/css/fontawesome-all.min.css?1736153311" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/fontawesome-all.min.css?1736153311" rel="stylesheet"></noscript>
-    <link href="/langchain_project_book/css/nucleus.css?1736153311" rel="stylesheet">
-    <link href="/langchain_project_book/css/auto-complete.css?1736153311" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/auto-complete.css?1736153311" rel="stylesheet"></noscript>
-    <link href="/langchain_project_book/css/perfect-scrollbar.min.css?1736153311" rel="stylesheet">
-    <link href="/langchain_project_book/css/fonts.css?1736153311" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/fonts.css?1736153311" rel="stylesheet"></noscript>
-    <link href="/langchain_project_book/css/theme.css?1736153311" rel="stylesheet">
-    <link href="/langchain_project_book/css/theme-auto.css?1736153311" rel="stylesheet" id="R-variant-style">
-    <link href="/langchain_project_book/css/chroma-auto.css?1736153311" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/langchain_project_book/css/print.css?1736153311" rel="stylesheet" media="print">
-    <script src="/langchain_project_book/js/variant.js?1736153311"></script>
+    <link href="/langchain_project_book/css/fontawesome-all.min.css?1736153467" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/fontawesome-all.min.css?1736153467" rel="stylesheet"></noscript>
+    <link href="/langchain_project_book/css/nucleus.css?1736153467" rel="stylesheet">
+    <link href="/langchain_project_book/css/auto-complete.css?1736153467" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/auto-complete.css?1736153467" rel="stylesheet"></noscript>
+    <link href="/langchain_project_book/css/perfect-scrollbar.min.css?1736153467" rel="stylesheet">
+    <link href="/langchain_project_book/css/fonts.css?1736153467" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/langchain_project_book/css/fonts.css?1736153467" rel="stylesheet"></noscript>
+    <link href="/langchain_project_book/css/theme.css?1736153467" rel="stylesheet">
+    <link href="/langchain_project_book/css/theme-auto.css?1736153467" rel="stylesheet" id="R-variant-style">
+    <link href="/langchain_project_book/css/chroma-auto.css?1736153467" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/langchain_project_book/css/print.css?1736153467" rel="stylesheet" media="print">
+    <script src="/langchain_project_book/js/variant.js?1736153467"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..\/..';
@@ -149,8 +149,9 @@ Install Neo4j with Docker: We will utilize Docker to install Neo4j, which simpli
 Username: <code>neo4j</code>
 Password: <code>neo4j_password</code>
 After entering these credentials, you will be directed to the main interface of the Neo4j dashboard, where you can begin managing your database.</p>
-<p><a href="#R-image-ad2aa6cfbdced625cd1e4a10a1955cb0" class="lightbox-link"><img class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="/langchain_project_book/images/2024-12-31-18-14-52.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ad2aa6cfbdced625cd1e4a10a1955cb0"><img class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="/langchain_project_book/images/2024-12-31-18-14-52.png"></a></p>
+<p><a href="#R-image-181ed0ebe0777cdfa1f6222bb80f5060" class="lightbox-link"><img class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="/langchain_project_book/images/2024-12-31-18-14-52.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-181ed0ebe0777cdfa1f6222bb80f5060"><img class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="/langchain_project_book/images/2024-12-31-18-14-52.png"></a></p>
+<p>Figure 7.2: Neo4j Dashboard</p>
 <p>All data generated and managed by Neo4j will be permanently stored in the <code>/home/USER/neo4j_storage/data</code> directory. For the sake of simplicity in this document, I will utilize the default database provided by Neo4j.</p>
 <h4 id="methods-for-importing-data-into-neo4j">Methods for Importing Data into Neo4j</h4>
 <p>There are several methods available for importing data into the Neo4j database. You can either utilize the Neo4j dashboard for a user-friendly import process or employ Cypher scripts for more advanced data manipulation. Below, I outline the straightforward steps for importing data through the Neo4j dashboard.</p>
@@ -220,7 +221,7 @@ LangChain AI
           </a>
         </div>
         <script>
-          window.index_js_url="/langchain_project_book/searchindex.js?1736153311";
+          window.index_js_url="/langchain_project_book/searchindex.js?1736153467";
         </script>
         <search><form action="/langchain_project_book/search/index.html" method="get">
           <div class="searchbox default-animation">
@@ -233,12 +234,12 @@ LangChain AI
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/langchain_project_book/js/auto-complete.js?1736153311" defer></script>
-        <script src="/langchain_project_book/js/lunr/lunr.min.js?1736153311" defer></script>
-        <script src="/langchain_project_book/js/lunr/lunr.stemmer.support.min.js?1736153311" defer></script>
-        <script src="/langchain_project_book/js/lunr/lunr.multi.min.js?1736153311" defer></script>
-        <script src="/langchain_project_book/js/lunr/lunr.en.min.js?1736153311" defer></script>
-        <script src="/langchain_project_book/js/search.js?1736153311" defer></script>
+        <script src="/langchain_project_book/js/auto-complete.js?1736153467" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.min.js?1736153467" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.stemmer.support.min.js?1736153467" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.multi.min.js?1736153467" defer></script>
+        <script src="/langchain_project_book/js/lunr/lunr.en.min.js?1736153467" defer></script>
+        <script src="/langchain_project_book/js/search.js?1736153467" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation homelinks">
         <ul>
@@ -315,8 +316,8 @@ LangChain AI
         </div>
       </div>
     </aside>
-    <script src="/langchain_project_book/js/clipboard.min.js?1736153311" defer></script>
-    <script src="/langchain_project_book/js/perfect-scrollbar.min.js?1736153311" defer></script>
-    <script src="/langchain_project_book/js/theme.js?1736153311" defer></script>
+    <script src="/langchain_project_book/js/clipboard.min.js?1736153467" defer></script>
+    <script src="/langchain_project_book/js/perfect-scrollbar.min.js?1736153467" defer></script>
+    <script src="/langchain_project_book/js/theme.js?1736153467" defer></script>
   </body>
 </html>
