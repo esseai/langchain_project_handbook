@@ -48,7 +48,7 @@
       <link>http://localhost:1313/langchain_project_book/talk_to_graph_db/summary/index.html</link>
       <pubDate>Fri, 03 Jan 2025 22:04:12 -0500</pubDate>
       <guid>http://localhost:1313/langchain_project_book/talk_to_graph_db/summary/index.html</guid>
-      <description>Summary Every component is 100% open source ollama and neo4j are running in docker, which is easy to deploy and manage Everything is running in local, which is easy to debug and test and secured</description>
+      <description>Summary Every component is 100% open source ollama and neo4j are running in docker, which is easy to deploy and manage Everything is running in local, which is easy to debug and test and secured This chapter provides a comprehensive guide on how to set up Neo4j and seamlessly integrate it with a large language model using LangChain. Key Features&#xA;Fully Open Source: Every component utilized in this setup is entirely open source, ensuring transparency and flexibility for users. Docker Deployment: Both Ollama and Neo4j are deployed using Docker, which simplifies the installation and management processes. Docker’s containerization capabilities make it easy to maintain a consistent environment across different systems. Local Environment: The entire setup operates locally, facilitating straightforward debugging and testing. This local deployment not only enhances security but also allows for rapid iterations during development. In this chapter, you have learned:</description>
     </item>
   </channel>
 </rss>
